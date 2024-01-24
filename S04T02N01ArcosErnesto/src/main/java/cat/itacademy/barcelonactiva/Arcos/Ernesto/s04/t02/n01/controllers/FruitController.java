@@ -27,11 +27,7 @@ public class FruitController {
     public ResponseEntity<Optional<Fruit>> updateFruit(@PathVariable int id, @RequestBody Fruit fruit) {
         Optional<Fruit> updatedFruit = fruitService.update(id, fruit);
 
-        if(updatedFruit.isPresent()){
-            return ResponseEntity.status(HttpStatus.CREATED).body(updatedFruit);
-        } else{
-            return ResponseEntity.notFound().build();
-        }
+        return ResponseEntity.status(HttpStatus.CREATED).body(updatedFruit);
 
     }
 

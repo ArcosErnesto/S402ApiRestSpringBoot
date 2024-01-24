@@ -1,8 +1,9 @@
-package cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.services;
+package cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.services.impl;
 
 import cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.domain.Fruit;
-import cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.exception.FruitNotFoundException;
+import cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.exceptions.FruitNotFoundException;
 import cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.repository.FruitRepository;
+import cat.itacademy.barcelonactiva.Arcos.Ernesto.s04.t02.n01.model.services.FruitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class FruitServiceImpl implements FruitService{
+public class FruitServiceImpl implements FruitService {
     @Autowired
     private FruitRepository fruitRepository;
     @Transactional
